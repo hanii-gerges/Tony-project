@@ -33,7 +33,7 @@
 <main class="container mt-4">
 <section>
   <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-              <div class="st-custom-button" data-network="facebook" data-url="facebook.com" data-image="https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png" data-description="لقد أنهيت كتاب القط هرهور من تأليف سارة جرار تحدي القراءة العربي!  
+              <div class="st-custom-button facebook" data-network="facebook" data-url="facebook.com" data-image="https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png" data-description="لقد أنهيت كتاب القط هرهور من تأليف سارة جرار تحدي القراءة العربي!  
 تعرف اكثر على تحدي القراءة العربي عن طريق هذا الموقع:  Website
 
  تابع تحدي القراءة العربي على مواقع التواصل الإجتماعي:   #ArabReadingChallenge تحدي_القراءة_العربي#">facebook</div>
@@ -55,13 +55,25 @@
 <p>&copy; 2023 Your Name. All rights reserved.</p>
 </footer>
 
-
-<script>
-// Visitor counter logic
-var visitorCountElement = document.getElementById("visitorCount");
-var currentCount = parseInt(visitorCountElement.textContent);
-visitorCountElement.textContent = currentCount + 1;
-</script>
+  <script>
+  $.('.facebook').on('click', function() {
+    // Define your custom sharing data
+    var shareConfig = {
+      url: 'https://yourwebsite.com', // The URL to be shared
+      title: 'Custom Title',          // Custom title
+      description: 'Custom description goes here', // Custom description
+      image: 'https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png', // Custom image
+    };
+    
+    // Open ShareThis Facebook sharing with custom data
+    ShareThisWidget.share({
+      network: 'facebook',
+      url: shareConfig.url,
+      title: shareConfig.title,
+      description: shareConfig.description,
+      image: shareConfig.image
+    });
+  });
 
 <!-- Add Bootstrap JS and jQuery (required for some Bootstrap components) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
