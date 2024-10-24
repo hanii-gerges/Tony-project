@@ -27,12 +27,15 @@
 <main class="container mt-4">
 <section>
   <div class="sharethis-inline-share-buttons">test</div>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hanii-gerges.github.io/Tony-project/" target="_blank">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hanii-gerges.github.io/Tony-project/&quote=This%20is%20the%20pre-written%20text%20for%20the%20post%20that%20users%20can%20edit" target="_blank">
     <button>Share on Facebook</button>
 </a>
   
-<!--               <div class="st-custom-button facebook" data-network="facebook">facebook</div>
-              <div class="st-custom-button" data-network="twitter" data-url="x.com" data-image="https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png" data-description="لقد أنهيت كتاب القط هرهور من تأليف سارة جرار تحدي القراءة العربي! 
+              <div class="st-custom-button facebook">facebook</div>
+              <div class="st-custom-button twitter">twitter</div>
+              <div class="st-custom-button whatsapp">whatsapp</div>
+              <div class="st-custom-button snapchat">snapchat</div>
+              <!-- <div class="st-custom-button" data-network="twitter" data-url="x.com" data-image="https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png" data-description="لقد أنهيت كتاب القط هرهور من تأليف سارة جرار تحدي القراءة العربي! 
 تعرف اكثر على تحدي القراءة العربي عن طريق هذا الموقع:  Website
 
  تابع تحدي القراءة العربي على مواقع التواصل الإجتماعي: #ArabReadingChallenge تحدي_القراءة_العربي#">x</div>
@@ -54,7 +57,7 @@
   $('.facebook').on('click', function() {
     // Define your custom sharing data
     var shareConfig = {
-      url: 'https://yourwebsite.com', // The URL to be shared
+      url: 'https://hanii-gerges.github.io/Tony-project/', // The URL to be shared
       title: 'Custom Title',          // Custom title
       description: 'Custom description goes here', // Custom description
       image: 'https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png', // Custom image
@@ -63,6 +66,60 @@
     // Open ShareThis Facebook sharing with custom data
     ShareThisWidget.share({
       network: 'facebook',
+      url: shareConfig.url,
+      title: shareConfig.title,
+      description: shareConfig.description,
+      image: shareConfig.image
+    });
+  });
+  $('.twitter').on('click', function() {
+    // Define your custom sharing data
+    var shareConfig = {
+      url: 'https://hanii-gerges.github.io/Tony-project/', // The URL to be shared
+      title: 'Custom Title',          // Custom title
+      description: 'Custom description goes here', // Custom description
+      image: 'https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png', // Custom image
+    };
+    
+    // Open ShareThis Facebook sharing with custom data
+    ShareThisWidget.share({
+      network: 'twitter',
+      url: shareConfig.url,
+      title: shareConfig.title,
+      description: shareConfig.description,
+      image: shareConfig.image
+    });
+  });
+  $('.whatsapp').on('click', function() {
+    // Define your custom sharing data
+    var shareConfig = {
+      url: 'https://hanii-gerges.github.io/Tony-project/', // The URL to be shared
+      title: 'Custom Title',          // Custom title
+      description: 'Custom description goes here', // Custom description
+      image: 'https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png', // Custom image
+    };
+    
+    // Open ShareThis Facebook sharing with custom data
+    ShareThisWidget.share({
+      network: 'whatsapp',
+      url: shareConfig.url,
+      title: shareConfig.title,
+      description: shareConfig.description,
+      image: shareConfig.image
+    });
+  });
+  $('.snapchat').on('click', function() {
+    // Define your custom sharing data
+    var shareConfig = {
+      url: 'https://hanii-gerges.github.io/Tony-project/', // The URL to be shared
+      title: 'Custom Title',          // Custom title
+      description: 'Custom description goes here', // Custom description
+      image: 'https://student-stg-mbrgi.ireadarabic.com/uploads/books/3b78119b526bdc1eab85d8fda72c571d.png', // Custom image
+    };
+    
+    // Open ShareThis Facebook sharing with custom data
+    ShareThisWidget.share({
+      network: 'snapchat',
       url: shareConfig.url,
       title: shareConfig.title,
       description: shareConfig.description,
